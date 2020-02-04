@@ -14,6 +14,19 @@
 [![Twitter @GeneDeLisaDev](https://img.shields.io/twitter/follow/GeneDeLisaDev.svg?style=social)](https://twitter.com/GeneDeLisaDev)
 
 
+This is just an updated version of Gene De Lisa's SwiftMIDI example.
+
+I basically just made a fork and updated things to work with Swift 5 and XCode 11 out of the box, for my own sanity.
+
+Very little has changed, other that fixing minor syntax changes.
+
+Remember you have to download the Fluid SoundFont, to big to add to the depot.
+
+Stan
+
+
+Gene's Orginal ReadMe Follows.
+
 
 An example using Core MIDI with Swift 3.
 

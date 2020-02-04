@@ -187,7 +187,7 @@ class MIDIManager : NSObject {
     }
     
     // signifies that other aspects of the session changed, such as the connection list, connection policy
-    func midiNetworkChanged(notification:NSNotification) {
+	@objc func midiNetworkChanged(notification:NSNotification) {
         print("\(#function)")
         print("\(notification)")
         if let session = notification.object as? MIDINetworkSession {
@@ -211,7 +211,7 @@ class MIDIManager : NSObject {
         }
     }
     
-    func midiNetworkContactsChanged(notification:NSNotification) {
+	@objc func midiNetworkContactsChanged(notification:NSNotification) {
         print("\(#function)")
         print("\(notification)")
         if let session = notification.object as? MIDINetworkSession {
@@ -349,7 +349,9 @@ class MIDIManager : NSObject {
         case .externalDestination:
             os_log("midiObjectType: ExternalDestination", log: MIDIManager.midiLog, type: .debug)
             break
-        }
+			@unknown default:
+			fatalError("Fatal Error: ExternalDestination")
+		}
         
     }
     
@@ -467,7 +469,9 @@ class MIDIManager : NSObject {
                 print("errorCode \(m.errorCode)")
             }
             break
-        }
+			@unknown default:
+			fatalError("Fatal Error: withMemoryRebound")
+		}
     }
     
     
